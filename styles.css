@@ -1,5 +1,5 @@
 :root {
-    --azul-oscuro: #003366;
+    --azul-oscuro: #003082;
     --blanco: #ffffff;
     --verde-whatsapp: #25D366;
     --amarillo-oferta: #FFD700;
@@ -32,7 +32,7 @@ header {
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('img/s11.png');
+    background: linear-gradient(rgba(0, 48, 130, 0.8), rgba(0, 48, 130, 0.8)), url('img/s11.png');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -74,7 +74,70 @@ header {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
-.contacto {
+/* Contenedor para las flechas y el cuadro de cotización */
+.oferta-cotizacion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Flechas que apuntan al cuadro de cotización */
+.flechas-cotizacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    animation: bounce 2s infinite;
+}
+
+.flecha {
+    font-size: 2rem;
+    color: var(--turquesa);
+    transform: rotate(0deg);
+}
+
+/* Cuadro de "Cotización al instante" */
+.cotizacion-instantanea {
+    background-color: var(--blanco);
+    border: 2px solid var(--verde-whatsapp);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.cotizacion-instantanea:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cotizacion-texto {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+.cotizacion-icono {
+    font-size: 2.5rem;
+    color: var(--verde-whatsapp);
+}
+
+/* Animación para las flechas */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Nuevo cuadro de texto en el hero */
+.texto-destacado-hero {
     flex: 1;
     min-width: 300px;
     padding: 2rem;
@@ -83,59 +146,27 @@ header {
     color: var(--azul-oscuro);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.empresa-afiliada-logo {
     text-align: center;
-    margin-bottom: 15px;
 }
 
-.empresa-afiliada-logo img {
-    max-width: 120px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.contacto h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: var(--turquesa);
-}
-
-.telefono {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: var(--turquesa);
-    margin: 0.5rem 0;
-    text-align: center;
-    display: block;
-}
-
-.contacto p {
-    text-align: center;
-    margin: 8px 0;
-}
-
-.texto-destacado {
-    padding: 3rem 2rem;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: var(--blanco);
-    color: var(--azul-oscuro);
-}
-
-.texto-destacado h2 {
+.texto-destacado-hero h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: var(--azul-oscuro);
+    color: var(--turquesa);
 }
 
-.texto-destacado p {
+.texto-destacado-hero p {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 1rem;
+    text-align: center;
+}
+
+.texto-destacado-hero .resaltado {
+    font-weight: bold;
+    color: var(--turquesa);
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .info-boxes {
@@ -249,11 +280,17 @@ header {
     cursor: pointer;
 }
 
+/* Botón de WhatsApp con flechas animadas */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
 }
 
 .whatsapp-button {
@@ -268,15 +305,91 @@ header {
     font-weight: bold;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: visible;
+    animation: pulse 2s infinite;
+    transform-origin: center;
 }
 
 .whatsapp-button:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    animation: none;
 }
 
 .whatsapp-button i {
     font-size: 1.2rem;
+}
+
+/* Animación de pulso para el botón */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Flechas animadas alrededor del botón */
+.whatsapp-float::before,
+.whatsapp-float::after {
+    content: "👆";
+    position: absolute;
+    font-size: 1.8rem;
+    color: var(--verde-whatsapp);
+    opacity: 0;
+    z-index: -1;
+    animation: floatArrow 3s infinite, twinkle 1.5s infinite;
+}
+
+.whatsapp-float::before {
+    top: -30px;
+    right: 10px;
+    animation-delay: 0.3s, 0.1s;
+}
+
+.whatsapp-float::after {
+    top: -20px;
+    right: -30px;
+    animation-delay: 0.6s, 0.4s;
+}
+
+/* Animación de las flechas flotantes */
+@keyframes floatArrow {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-40px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+/* Efecto de titileo para las flechas */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Burbujas adicionales para más atención */
+.whatsapp-float::after {
+    content: "💬";
+    top: auto;
+    bottom: -30px;
+    right: 10px;
+    animation-delay: 0.9s, 0.7s;
+}
+
+.whatsapp-float::before {
+    content: "✨";
+    top: -40px;
+    right: -10px;
+    font-size: 1.5rem;
 }
 
 .contact-section {
