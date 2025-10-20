@@ -10,8 +10,9 @@
 <body>
     <!-- Encabezado con logo -->
     <header>
-        <img src="img/logo1.jpg" alt="Vivitus Salud" class="logo">
+        <img src="C:\Users\Megar\OneDrive\Documentos\Vivi tu salud\img\logo1.jpg" alt="Vivitus Salud" class="logo">
     </header>
+
     <!-- Hero con información -->
     <section class="hero">
         <div class="hero-content">
@@ -19,64 +20,78 @@
                 <div class="oferta-destacada">¡Hasta 50% OFF!</div>
                 <div class="oferta-subtitle">Para nuevos socios en más de 10 planes.</div>
                 <div class="oferta-subtitle">Te brindamos los mejores beneficios</div>
-            </div>
-            <div class="contacto">
-                <div class="empresa-afiliada-logo">
-                    <img src="img/L1.jpg" alt="Empresa Afiliada">
+                <!-- Flechas y cuadro de cotización -->
+                <div class="oferta-cotizacion-container">
+                    <div class="flechas-cotizacion">
+                        <span class="flecha">↓</span>
+                        <span class="flecha">↓</span>
+                        <span class="flecha">↓</span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5491134306604&text=Hola!%20Quiero%20una%20cotización%20al%20instante" target="_blank" class="cotizacion-instantanea">
+                        <span class="cotizacion-texto">Cotización al instante</span>
+                        <i class="fab fa-whatsapp cotizacion-icono"></i>
+                    </a>
                 </div>
-                <h2>Elegí el plan que más se adapte a vos</h2>
-                <p class="telefono">📞 11 3430-6604</p>
-                <p><strong>Asesora oficial de medicina privada</strong></p>
-                <p>Asesoramiento 24/7</p>
-                <p>Comunicate con nosotros y elegimos el mejor plan para vos</p>
+            </div>
+            <!-- Nuevo cuadro de texto reemplazando al anterior -->
+            <div class="texto-destacado-hero">
+                <h2>A veces no solo necesitas una cobertura médica...</h2>
+                <p>Sino saber que del otro lado hay alguien real para acompañarte y brindarte la ayuda para encontrar el mejor plan de salud </p> <p> <br> La buena salud es todo</p>
+                <p>📌 <span class="resaltado">Comunícate con nosotros</span> y descubre cómo podemos acompañarte en cada etapa de tu vida.</p>
             </div>
         </div>
     </section>
-    <!-- Texto destacado -->
-    <section class="texto-destacado">
-        <h2>Elegí el plan que mejor se adapte a tus necesidades</h2>
-        <p>En Vivitusalud Medicina Privada contamos con una amplia variedad de planes y beneficios pensados para vos.</p>
-        <p>Ofrecemos descuentos exclusivos para nuevos socios, garantizando cobertura médica de calidad, accesible y confiable.</p>
-        <p>📌 Comunicate con nosotros y encontrá la alternativa que mejor acompañe tu bienestar y el de tu familia.</p>
-    </section>
+
     <!-- Cuadros de información -->
-    <section class="info-boxes">
+   <section class="info-boxes">
         <div class="info-box">
             <i class="fas fa-clock"></i>
             <h3>Atención 24/7</h3>
-            <p>Credencial digital</p>
-            <p>Médico online</p>
-            <p>100% anticonceptivos y ortodoncia</p>
-            <p>Asistencia al viajero en todo el mundo</p>
-        </div>
+            <p>Video Consultas</p>
+            <p>Médico en linea</p>
+            <p>Asistencia al viajero a partir del plan 1500</p>
+            <p>Reintegro</p>
+            <p>Autorizaciones</p>
+            <p>Gestiones online</p>
+                   </div>
         <div class="info-box">
             <i class="fas fa-gift"></i>
             <h3>Club de beneficios</h3>
-            <p>Descuentos en medicamentos del 40%</p>
-            <p>Cobertura en 100% en odontología</p>
-            <p>Cobertura del 100% en anticonceptivos</p>
-            <p>Beneficios ópticos</p>
+
+            <p>Descuentos en Farmacia del 40%</p>
+            <p>Accede a los mejores descuentos y promociones en tu ciudad y en tu pais</p>
+            <p>Beneficios en ópticas</p>
+            <p>Turismo y Referidos</p>
         </div>
         <div class="info-box">
             <i class="fas fa-heartbeat"></i>
-            <h3>Planes GEN</h3>
-            <p>Salud mental sin copago</p>
+            <h3>Plan JOVEN GEN <br> ( De 18 a 35 años)</h3>
+            <p>Salud mental </p>
             <p>Recetas digitales</p>
             <p>Guardería de mascotas</p>
+            <p>Cobertuda en odontologia ORTODONCIA AL 100 % </p>
+            <p>Anticonceptivos al 100 % , Receta Digital en el momento </p>
         </div>
         <div class="info-box">
             <i class="fas fa-user-friends"></i>
-            <h3>Plan de 18 a 35 años</h3>
+            <h3>Planes con o sin copagos </h3>
+
+            <p>Plan F 800</p>
             <p>Plan 1000</p>
             <p>Plan 1500</p>
             <p>Plan 3000</p>
+            <p>Plan 4000</p>
+            <p>Plan 4500</p>
+            <p>Plan 5000</p>
+            <p>Plan 6000</p>
         </div>
     </section>
+
     <!-- Sección de contacto con formulario e imagen -->
     <section class="contact-section">
         <div class="contact-container">
             <div class="contact-image">
-                <img src="img/s11.png" alt="Atención al cliente">
+                <img src="C:\Users\Megar\OneDrive\Documentos\Vivi tu salud\img\s11.png" alt="Atención al cliente">
             </div>
             <div class="contact-form">
                 <h2>Dejanos tu consulta</h2>
@@ -90,11 +105,13 @@
             </div>
         </div>
     </section>
+
     <!-- Modal para ver imágenes en grande -->
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
+
     <!-- Botón de WhatsApp -->
     <div class="whatsapp-float">
         <a href="https://api.whatsapp.com/send?phone=5491134306604&text=Hola!%20Quiero%20información%20sobre%20los%20planes%20de%20salud" class="whatsapp-button" target="_blank">
@@ -102,10 +119,12 @@
             <span>¡Escríbenos por WhatsApp!</span>
         </a>
     </div>
+
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2025 Vivitus Salud. Todos los derechos reservados.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
