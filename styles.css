@@ -1,366 +1,61 @@
-:root {
-    --azul-oscuro: #003082;
-    --blanco: #ffffff;
-    --verde-whatsapp: #25D366;
-    --amarillo-oferta: #FFD700;
-    --gris-claro: #f8f9fa;
-    --turquesa: #00bcd4;
-}
+/* --- Tu CSS original para computadoras --- */
+/* (No lo borres, solo agrega lo siguiente al final) */
 
-/* --- Estilos base (para todos los dispositivos) --- */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: var(--blanco);
-}
-
-header {
-    background-color: var(--azul-oscuro);
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    height: 60px;
-    width: auto;
-}
-
-.hero {
-    background: linear-gradient(rgba(0, 48, 130, 0.8), rgba(0, 48, 130, 0.8)), url('img/s11.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blanco);
-    padding: 80px 20px 20px;
-}
-
-.hero-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    gap: 2rem;
-}
-
-.oferta {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-}
-
-.oferta-destacada {
-    font-size: 4rem;
-    font-weight: bold;
-    color: var(--blanco);
-    margin: 0;
-    line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.oferta-subtitle {
-    font-size: 1.5rem;
-    color: var(--blanco);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-
-.oferta-cotizacion-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.flechas-cotizacion {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 15px 0;
-    animation: bounce 2s infinite;
-}
-
-.flecha {
-    font-size: 2rem;
-    color: var(--turquesa);
-}
-
-.cotizacion-instantanea {
-    background-color: var(--blanco);
-    border: 2px solid var(--verde-whatsapp);
-    border-radius: 12px;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
-}
-
-.cotizacion-instantanea:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.cotizacion-texto {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--azul-oscuro);
-}
-
-.cotizacion-icono {
-    font-size: 2.5rem;
-    color: var(--verde-whatsapp);
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-.texto-destacado-hero {
-    flex: 1;
-    min-width: 300px;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    color: var(--azul-oscuro);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.texto-destacado-hero h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--turquesa);
-}
-
-.texto-destacado-hero p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.texto-destacado-hero .resaltado {
-    font-weight: bold;
-    color: var(--turquesa);
-    font-style: italic;
-    text-decoration: underline;
-}
-
-.info-boxes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    gap: 1.5rem;
-}
-
-.info-box {
-    background-color: var(--blanco);
-    border-radius: 10px;
-    padding: 20px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e0e0e0;
-}
-
-.info-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.info-box i {
-    font-size: 2.5rem;
-    color: var(--turquesa);
-    margin-bottom: 15px;
-}
-
-.info-box h3 {
-    color: var(--azul-oscuro);
-    margin-top: 0;
-    font-size: 1.3rem;
-}
-
-.info-box p {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.contact-section {
-    background-color: var(--gris-claro);
-    padding: 40px 20px;
-    margin-top: 40px;
-}
-
-.contact-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-}
-
-.contact-image {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
-}
-
-.contact-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form {
-    flex: 1;
-    min-width: 300px;
-    background-color: var(--blanco);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-    text-align: center;
-    color: var(--azul-oscuro);
-    margin-bottom: 20px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.contact-form textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-.contact-form button {
-    background-color: var(--turquesa);
-    color: var(--blanco);
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.contact-form button:hover {
-    background-color: #0097a7;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
-}
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
-}
-
-.whatsapp-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: var(--verde-whatsapp);
-    color: var(--blanco);
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative;
-    overflow: visible;
-    animation: pulse 2s infinite;
-    transform-origin: center;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-    animation: none;
-}
-
-.whatsapp-button i {
-    font-size: 1.2rem;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-/* --- Media Queries para Móviles (solo se aplican en pantallas ≤ 768px) --- */
+/* --- Media Queries para Móviles --- */
 @media (max-width: 768px) {
-    /* Ajustes para el hero */
+    /* Hero Section */
     .hero {
-        min-height: 60vh;
-        padding: 60px 10px 10px;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        padding: 70px 10px 20px;
     }
 
     .hero-content {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        width: 100%;
     }
 
     .oferta-destacada {
-        font-size: 2rem; /* Tamaño reducido para móviles */
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
     }
 
     .oferta-subtitle {
         font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .flechas-cotizacion {
+        flex-direction: row;
+        gap: 8px;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .flecha {
+        font-size: 1.5rem;
+    }
+
+    .cotizacion-instantanea {
+        flex-direction: row;
+        padding: 0.7rem 1rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .cotizacion-texto {
+        font-size: 0.9rem;
+    }
+
+    .cotizacion-icono {
+        font-size: 1.8rem;
     }
 
     .texto-destacado-hero {
+        width: 100%;
         padding: 1rem;
         margin-top: 1rem;
     }
@@ -371,29 +66,38 @@ footer {
 
     .texto-destacado-hero p {
         font-size: 0.9rem;
+        line-height: 1.4;
     }
 
-    /* Ajustes para los info-boxes */
     .info-boxes {
         flex-direction: column;
         align-items: center;
+        padding: 10px;
     }
 
     .info-box {
         width: 90%;
         margin-bottom: 1rem;
+        padding: 15px;
     }
 
-    /* Ajustes para la sección de contacto */
+    .contact-section {
+        padding: 20px 10px;
+    }
+
     .contact-container {
         flex-direction: column;
     }
 
-    .contact-image, .contact-form {
+    .contact-image,
+    .contact-form {
         width: 100%;
     }
 
-    /* Ajustes para el botón de WhatsApp */
+    .contact-image img {
+        width: 100%;
+    }
+
     .whatsapp-float {
         bottom: 15px;
         right: 15px;
@@ -402,20 +106,22 @@ footer {
     .whatsapp-button {
         padding: 8px 12px;
         font-size: 0.8rem;
-        animation: none;
     }
 
     .whatsapp-button i {
         font-size: 1rem;
     }
 
-    /* Desactiva las flechas animadas en móviles */
+    .flechas-cotizacion,
+    .whatsapp-float {
+        animation: none !important;
+    }
+
     .whatsapp-float::before,
     .whatsapp-float::after {
         display: none;
     }
 
-    /* Ajustes generales para móviles */
     body {
         font-size: 0.9rem;
     }
