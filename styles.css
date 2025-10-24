@@ -494,39 +494,137 @@ footer {
 /* --- Tu CSS original para computadoras --- */
 /* (No lo borres, solo agrega lo siguiente al final) */
 
+/* --- Media Queries para Móviles --- */
 @media (max-width: 768px) {
-    /* Expandir el fondo azul del hero */
+    /* Hero Section */
     .hero {
-        min-height: 100vh; /* Ocupa toda la altura de la pantalla */
-        background: linear-gradient(rgba(0, 48, 130, 0.9), rgba(0, 48, 130, 0.9)), url('img/s11.png');
+        min-height: 100vh;
         background-size: cover;
         background-position: center;
-        background-attachment: fixed; /* Opcional: para que el fondo no se mueva al hacer scroll */
-        padding: 80px 10px 20px; /* Espacio para el header fijo y contenido */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 100px 100px 100px;
     }
 
-    /* Asegurar que el contenido no limite el fondo */
     .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
         width: 100%;
-        max-width: 100%; /* Evita que el contenido limite el ancho */
-        padding: 0 10px; /* Espacio lateral */
     }
 
-    /* Ajustar el texto "Hasta 50% OFF" */
     .oferta-destacada {
         font-size: 2.2rem;
         margin-bottom: 0.5rem;
     }
 
-    /* Asegurar que el cuadro de texto no desborde */
+    .oferta-subtitle {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .flechas-cotizacion {
+        flex-direction: row;
+        gap: 8px;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .flecha {
+        font-size: 1.5rem;
+    }
+
+    .cotizacion-instantanea {
+        flex-direction: row;
+        padding: 0.7rem 1rem;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .cotizacion-texto {
+        font-size: 0.9rem;
+    }
+
+    .cotizacion-icono {
+        font-size: 1.8rem;
+    }
+
     .texto-destacado-hero {
         width: 100%;
-        margin-top: 1rem;
         padding: 1rem;
-        background-color: rgba(255, 255, 255, 0.95);
+        margin-top: 1rem;
+    }
+
+    .texto-destacado-hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .texto-destacado-hero p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .info-boxes {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .info-box {
+        width: 90%;
+        margin-bottom: 1rem;
+        padding: 15px;
+    }
+
+    .contact-section {
+        padding: 20px 10px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-image,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-image img {
+        width: 100%;
+    }
+
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-button {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .whatsapp-button i {
+        font-size: 1rem;
+    }
+
+    .flechas-cotizacion,
+    .whatsapp-float {
+        animation: none !important;
+    }
+
+    .whatsapp-float::before,
+    .whatsapp-float::after {
+        display: none;
+    }
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.4;
     }
 }
-
