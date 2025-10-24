@@ -508,7 +508,7 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
-        width: 100%;
+        width: 80%;
     }
 
     .oferta-destacada {
@@ -628,6 +628,7 @@ footer {
         line-height: 1.4;
     }
 }
+
 
 
 
