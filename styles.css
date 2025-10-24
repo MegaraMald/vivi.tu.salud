@@ -7,6 +7,7 @@
     --turquesa: #00bcd4;
 }
 
+/* --- Estilos base (para todos los dispositivos) --- */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -207,158 +208,6 @@ header {
     line-height: 1.5;
 }
 
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 3rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: var(--gris-claro);
-}
-
-.galeria img {
-    max-width: 300px;
-    max-height: 300px;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.galeria img:hover {
-    transform: scale(1.02);
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    overflow: auto;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-content {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.modal img {
-    display: block;
-    max-width: 100%;
-    max-height: 80vh;
-    margin: auto;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: var(--blanco);
-    font-size: 3rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
-}
-
-.whatsapp-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: var(--verde-whatsapp);
-    color: var(--blanco);
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative;
-    overflow: visible;
-    animation: pulse 2s infinite;
-    transform-origin: center;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-    animation: none;
-}
-
-.whatsapp-button i {
-    font-size: 1.2rem;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.whatsapp-float::before,
-.whatsapp-float::after {
-    content: "👆";
-    position: absolute;
-    font-size: 1.8rem;
-    color: var(--verde-whatsapp);
-    opacity: 0;
-    z-index: -1;
-    animation: floatArrow 3s infinite, twinkle 1.5s infinite;
-}
-
-.whatsapp-float::before {
-    top: -30px;
-    right: 10px;
-    animation-delay: 0.3s, 0.1s;
-}
-
-.whatsapp-float::after {
-    top: -20px;
-    right: -30px;
-    animation-delay: 0.6s, 0.4s;
-}
-
-@keyframes floatArrow {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-40px) rotate(20deg);
-        opacity: 0;
-    }
-}
-
-@keyframes twinkle {
-    0%, 100% { opacity: 0.7; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.2); }
-}
-
 .contact-section {
     background-color: var(--gris-claro);
     padding: 40px 20px;
@@ -443,66 +292,140 @@ footer {
     color: var(--blanco);
 }
 
-/* --- Media Queries para Móviles --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--verde-whatsapp);
+    color: var(--blanco);
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: visible;
+    animation: pulse 2s infinite;
+    transform-origin: center;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    animation: none;
+}
+
+.whatsapp-button i {
+    font-size: 1.2rem;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* --- Media Queries para Móviles (solo se aplican en pantallas ≤ 768px) --- */
 @media (max-width: 768px) {
+    /* Ajustes para el hero */
+    .hero {
+        min-height: 60vh;
+        padding: 60px 10px 10px;
+    }
+
     .hero-content {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
     }
-    .texto-destacado-hero {
-        margin-top: 1rem;
-        padding: 1.5rem;
-    }
+
     .oferta-destacada {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Tamaño reducido para móviles */
     }
+
     .oferta-subtitle {
-        font-size: 1.2rem;
-    }
-    .flechas-cotizacion {
-        flex-direction: column;
-        gap: 5px;
-        animation: none;
-    }
-    .cotizacion-instantanea {
-        flex-direction: column;
-        padding: 0.8rem;
-    }
-    .cotizacion-texto {
         font-size: 1rem;
     }
+
+    .texto-destacado-hero {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .texto-destacado-hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .texto-destacado-hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes para los info-boxes */
+    .info-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .info-box {
-        width: 100%;
+        width: 90%;
         margin-bottom: 1rem;
     }
+
+    /* Ajustes para la sección de contacto */
     .contact-container {
         flex-direction: column;
     }
+
     .contact-image, .contact-form {
         width: 100%;
     }
+
+    /* Ajustes para el botón de WhatsApp */
     .whatsapp-float {
         bottom: 15px;
         right: 15px;
     }
+
     .whatsapp-button {
         padding: 8px 12px;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         animation: none;
     }
+
+    .whatsapp-button i {
+        font-size: 1rem;
+    }
+
+    /* Desactiva las flechas animadas en móviles */
     .whatsapp-float::before,
     .whatsapp-float::after {
         display: none;
     }
+
+    /* Ajustes generales para móviles */
     body {
         font-size: 0.9rem;
     }
+
     h1, h2, h3 {
         font-size: 1.2rem;
     }
+
     p {
         font-size: 0.9rem;
         line-height: 1.4;
     }
 }
-
