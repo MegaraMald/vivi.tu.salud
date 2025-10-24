@@ -506,8 +506,8 @@ footer {
 
     .hero-content {
         flex-direction: column;
-        text-align: left;
-        gap: 1rem;
+        text-align: center;
+        gap: 2rem;
         width: 100%;
     }
 
@@ -628,6 +628,7 @@ footer {
         line-height: 1.4;
     }
 }
+
 
 
 
