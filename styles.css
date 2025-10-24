@@ -506,9 +506,9 @@ footer {
 
     .hero-content {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         gap: 1rem;
-        width: 80%;
+        width: 100%;
     }
 
     .oferta-destacada {
@@ -628,6 +628,7 @@ footer {
         line-height: 1.4;
     }
 }
+
 
 
 
