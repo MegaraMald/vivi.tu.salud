@@ -20,7 +20,7 @@ header {
     padding: 1rem;
     text-align: center;
     position: fixed;
-    width: 90%;
+    width: 85%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,7 @@ header {
     min-height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     color: var(--blanco);
     padding: 100px 20px 20px;
 }
@@ -629,6 +629,7 @@ footer {
         line-height: 1.4;
     }
 }
+
 
 
 
